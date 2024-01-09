@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.socket.io/socket.io-3.0.1.min.js"></script>
+
+    <style>
+      .everything {
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+      }
+
+      * {
+        font-family: 'IBM Plex Mono', monospace;
+      }
+      .texts {
+        border-left-style: solid; 
+        padding: 20px; 
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center; ">Chatbox with Socket.io!</h1>
+    <div class="everything">
+      <div class="input-everything">
+        <div style="margin-bottom: 20px;">
+          <input class="name-input" placeholder="Enter name">
+          <button onclick="getName()" class="submit-name">Submit Name</button>
+          <p style="font-size: 15px;" class="name-display"></p>
+        </div>
+        <div>
+          <input class="message" placeholder="Enter message">
+          <button onclick="sendMessage()" class="submit">Submit</button>
+        </div>
+      </div>
+      <div class="texts"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
